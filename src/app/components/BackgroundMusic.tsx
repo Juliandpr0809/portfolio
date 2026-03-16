@@ -11,9 +11,10 @@ export const BackgroundMusic = memo(function BackgroundMusic() {
   // Detect mobile
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-      if (window.innerWidth < 768) {
-        setIsExpanded(true); // Default expanded on mobile
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      if (mobile) {
+        setIsExpanded(false); // Default collapsed on mobile to avoid blocking content
       }
     };
     checkMobile();
@@ -22,13 +23,11 @@ export const BackgroundMusic = memo(function BackgroundMusic() {
   }, []);
 
   const handleToggle = () => {
-    if (isMobile) {
-      setIsExpanded(!isExpanded);
-    }
+    setIsExpanded(!isExpanded);
   };
 
   return (
-    <div className="fixed bottom-10 left-10 z-50 flex flex-col items-start gap-3">
+    <div className="fixed bottom-6 left-6 md:bottom-10 md:left-10 z-50 flex flex-col items-start gap-3">
       <AnimatePresence>
         {!isPlaying && (
           <motion.div
@@ -37,7 +36,7 @@ export const BackgroundMusic = memo(function BackgroundMusic() {
             exit={{ opacity: 0, y: 10 }}
             className="text-[10px] font-bold text-amber-500 uppercase tracking-widest text-center animate-pulse w-full"
           >
-            Click anywhere to play music
+            {isMobile ? 'Toca para música' : 'Click anywhere to play music'}
           </motion.div>
         )}
       </AnimatePresence>
@@ -47,7 +46,7 @@ export const BackgroundMusic = memo(function BackgroundMusic() {
         onHoverEnd={() => !isMobile && setIsExpanded(false)}
         onClick={handleToggle}
         animate={{
-          width: isExpanded ? (isMobile ? '260px' : '300px') : '48px',
+          width: isExpanded ? (isMobile ? '240px' : '300px') : '48px',
           height: isExpanded ? '72px' : '48px',
           borderRadius: isExpanded ? '16px' : '24px',
         }}

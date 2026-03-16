@@ -47,18 +47,18 @@ export function Fragments() {
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <section id="fragments" className="bg-black text-white px-6 md:px-12 lg:px-24 py-32">
+    <section id="fragments" className="bg-black text-white px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 uppercase tracking-tight">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-12 uppercase tracking-tight text-center md:text-left">
           Fragmentos de mí<span className="text-red-500">.</span>
         </h2>
 
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-24"></div>
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-16 md:mb-24"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {/* Card 1: Timeline */}
           <motion.div 
-            className="md:col-span-2 lg:col-span-2 bg-zinc-900/50 rounded-[2rem] p-8 border border-white/10 hover:border-white/20 transition-colors"
+            className="md:col-span-2 lg:col-span-2 bg-zinc-900/50 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 border border-white/10 hover:border-white/20 transition-colors"
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.6 }}
@@ -84,19 +84,19 @@ export function Fragments() {
 
           {/* Card 2: Availability */}
           <motion.div 
-            className="md:col-span-1 lg:col-span-1 bg-zinc-900/50 rounded-[2rem] p-8 border border-white/10 hover:border-white/20 transition-colors flex flex-col items-center justify-center text-center"
+            className="md:col-span-1 lg:col-span-1 bg-zinc-900/50 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 border border-white/10 hover:border-white/20 transition-colors flex flex-col items-center justify-center text-center"
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-black text-green-400">¡Disponible!</h3>
+            <h3 className="text-2xl md:text-3xl font-black text-green-400">¡Disponible!</h3>
             <p className="text-sm text-zinc-400">Para empleo o freelance</p>
           </motion.div>
 
           {/* Card 3: Terminal */}
           <motion.div 
-            className="md:col-span-1 lg:col-span-1 bg-black rounded-[2rem] p-6 border border-white/10 hover:border-white/20 transition-colors font-mono text-xs"
+            className="md:col-span-1 lg:col-span-1 bg-black rounded-[1.5rem] md:rounded-[2rem] p-6 border border-white/10 hover:border-white/20 transition-colors font-mono text-xs"
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -116,16 +116,16 @@ export function Fragments() {
 
           {/* Card 4: Roles */}
           <motion.div 
-            className="md:col-span-1 lg:col-span-1 bg-zinc-900/50 rounded-[2rem] p-8 border border-white/10 hover:border-white/20 transition-colors flex flex-col justify-center"
+            className="md:col-span-1 lg:col-span-1 bg-zinc-900/50 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 border border-white/10 hover:border-white/20 transition-colors flex flex-col justify-center"
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <p className="text-xl text-zinc-500">thinker.</p>
-            <p className="text-xl text-zinc-500">builder.</p>
+            <p className="text-lg md:text-xl text-zinc-500">thinker.</p>
+            <p className="text-lg md:text-xl text-zinc-500">builder.</p>
             <div className="flex items-center">
-              <p className="text-2xl font-bold text-white">backend dev.</p>
+              <p className="text-xl md:text-2xl font-bold text-white">backend dev.</p>
               <motion.div
                 animate={{ opacity: [0, 1, 0] }}
                 transition={{ repeat: Infinity, duration: 1 }}
@@ -136,7 +136,7 @@ export function Fragments() {
 
           {/* Card 5: Map */}
           <motion.div 
-            className="md:col-span-1 lg:col-span-1 bg-zinc-900/50 rounded-[2rem] p-0 border border-white/10 hover:border-white/20 transition-colors overflow-hidden relative h-[300px]"
+            className="md:col-span-1 lg:col-span-1 bg-zinc-900/50 rounded-[1.5rem] md:rounded-[2rem] p-0 border border-white/10 hover:border-white/20 transition-colors overflow-hidden relative h-[200px] md:h-[300px]"
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -176,7 +176,7 @@ export function Fragments() {
 
           {/* Card 6: Music Player */}
           <motion.div 
-            className="md:col-span-2 lg:col-span-2 bg-zinc-900/50 rounded-[2rem] p-8 border border-white/10 hover:border-white/20 transition-colors"
+            className="md:col-span-2 lg:col-span-2 bg-zinc-900/50 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 border border-white/10 hover:border-white/20 transition-colors"
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -205,15 +205,15 @@ export function Fragments() {
                 )}
               </div>
               <div className="flex items-center justify-between">
-                <div>
-                  <h4 className="font-bold text-lg">The Avatar's Love</h4>
-                  <p className="text-sm text-zinc-400">Avatar: The Last Airbender OST</p>
+                <div className="pr-4">
+                  <h4 className="font-bold text-base md:text-lg truncate">The Avatar's Love</h4>
+                  <p className="text-xs md:text-sm text-zinc-400 truncate">Avatar: The Last Airbender OST</p>
                 </div>
                 <button 
                   onClick={togglePlayPause}
-                  className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform shadow-xl"
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform shadow-xl flex-shrink-0"
                 >
-                  {isPlaying ? <Pause size={20} fill="currentColor" /> : <PlayIcon size={20} fill="currentColor" />}
+                  {isPlaying ? <Pause size={18} fill="currentColor" /> : <PlayIcon size={18} fill="currentColor" />}
                 </button>
               </div>
               <div className="space-y-2">
@@ -224,11 +224,12 @@ export function Fragments() {
                     transition={{ type: 'spring', bounce: 0, duration: 0.5 }}
                   />
                 </div>
-                <div className="flex justify-between text-[10px] text-zinc-500 font-bold uppercase tracking-widest">
+                <div className="flex justify-between text-[8px] md:text-[10px] text-zinc-500 font-bold uppercase tracking-widest">
                   <span>{formatTime(currentTime)}</span>
                   <div className="flex items-center gap-2">
                     <div className="w-1 h-1 bg-amber-500 rounded-full animate-pulse" />
-                    <span>Música que suena mientras codifico</span>
+                    <span className="hidden sm:inline">Música que suena mientras codifico</span>
+                    <span className="sm:hidden text-right">Coding music</span>
                   </div>
                 </div>
               </div>
@@ -237,7 +238,7 @@ export function Fragments() {
 
           {/* Card 7: Quote / Typewriter */}
           <motion.div 
-            className="md:col-span-1 lg:col-span-2 bg-zinc-900/50 rounded-[2rem] p-8 border border-white/10 hover:border-white/20 transition-colors flex flex-col justify-center relative overflow-hidden"
+            className="md:col-span-1 lg:col-span-2 bg-zinc-900/50 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 border border-white/10 hover:border-white/20 transition-colors flex flex-col justify-center relative overflow-hidden"
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -246,7 +247,7 @@ export function Fragments() {
             <div className="font-mono space-y-2">
               <TypewriterText text="Antes solo hacía CSS." delay={0.8} />
               <TypewriterText text="Ahora levanto servidores Flask" delay={2.5} />
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <TypewriterText text="a las 2am con café." delay={4.5} />
                 <motion.div 
                   initial={{ opacity: 0 }}

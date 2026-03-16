@@ -60,11 +60,11 @@ export function Hero() {
       </motion.div>
 
       {/* Main Content Area */}
-      <div className="relative flex flex-col items-center justify-end w-full h-screen px-6">
+      <div className="relative flex flex-col items-center justify-end w-full h-screen px-0 md:px-6">
         
         {/* Profile Image */}
         <div 
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[400px] h-[50vh] md:h-[75vh] z-0 pointer-events-none"
+          className="absolute top-0 left-0 md:left-1/2 md:-translate-x-1/2 w-full md:max-w-[400px] h-[50vh] md:h-[75vh] z-0 pointer-events-none"
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -85,12 +85,12 @@ export function Hero() {
         </div>
 
         {/* Large Typography */}
-        <div className="relative z-10 text-center pointer-events-none mt-auto pb-24 md:pb-24">
+        <div className="relative z-10 text-center pointer-events-none mt-auto pb-48 md:pb-24 px-6 md:px-0">
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-5xl md:text-8xl lg:text-[140px] font-bold leading-none tracking-tight uppercase text-white"
+            className="text-5xl sm:text-6xl md:text-8xl lg:text-[140px] font-bold leading-none tracking-tight uppercase text-white"
           >
             Hola<br />
             Soy Julian<span className="text-[#e91e63]">.</span>
@@ -99,12 +99,12 @@ export function Hero() {
       </div>
 
       {/* Footer Text - Diego Style */}
-      <div className="absolute bottom-32 md:bottom-24 left-6 md:left-24 text-left z-10 max-w-sm space-y-2 opacity-80 px-6 md:px-0">
+      <div className="absolute bottom-20 md:bottom-24 left-0 md:left-24 text-center md:text-left z-10 w-full md:max-w-sm space-y-2 opacity-80 px-6 md:px-0">
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="text-[11px] md:text-xs font-medium tracking-wide uppercase text-white"
+          className="text-[10px] md:text-xs font-medium tracking-wide uppercase text-white"
         >
           Creando soluciones backend desde <span className="font-bold">2024</span>
         </motion.p>
@@ -112,7 +112,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="text-[11px] md:text-xs font-medium tracking-wide uppercase flex items-center gap-1 text-white"
+          className="text-[10px] md:text-xs font-medium tracking-wide uppercase flex items-center justify-center md:justify-start gap-1 text-white"
         >
           Actualmente, <span className="font-bold">Desarrollador Web</span> en Barranquilla 
           <span className="text-[10px]">↗</span>

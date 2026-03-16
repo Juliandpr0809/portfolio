@@ -20,15 +20,17 @@ export default function App() {
 function AppContent() {
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-[#e91e63] selection:text-white overflow-x-hidden">
-      <BackgroundMusic />
-      <Hero />
-      <Suspense fallback={<div className="h-screen bg-black" />}>
-        <Projects />
-        <Fragments />
-        <About />
-        <Skills />
-        <Footer />
-      </Suspense>
+      <main className="overflow-x-hidden">
+        <BackgroundMusic />
+        <Hero />
+        <Suspense fallback={<div className="h-screen bg-black" />}>
+          <Projects />
+          <Fragments />
+          <About />
+          <Skills />
+          <Footer />
+        </Suspense>
+      </main>
     </div>
   );
 }

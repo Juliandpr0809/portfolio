@@ -106,16 +106,16 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="bg-black text-white px-6 md:px-12 lg:px-24 py-16 md:py-32">
+    <section id="projects" className="bg-black text-white px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32">
       <motion.div
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl md:text-5xl font-black mb-12 uppercase tracking-tight text-center md:text-left">Proyectos Destacados</h2>
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-12 uppercase tracking-tight text-center md:text-left">Proyectos Destacados</h2>
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-16 md:mb-24"></div>
 
-        <div className="space-y-24 md:space-y-32">
+        <div className="space-y-16 md:space-y-24 lg:space-y-32">
           {projects.map((project, index) => (
             <div key={project.id}>
               <motion.div
@@ -123,11 +123,11 @@ export function Projects() {
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start py-12 md:py-24"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start py-8 md:py-16 lg:py-24"
               >
                 {/* Project Info - Tight margins and precise text sizes */}
-                <div className="max-w-xl order-2 lg:order-1">
-                  <h3 className="text-2xl md:text-4xl font-black mb-4 leading-[1.1] uppercase tracking-tight">
+                <div className="max-w-xl order-1 lg:order-1">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 leading-[1.1] uppercase tracking-tight">
                     {project.name}
                   </h3>
 
@@ -143,7 +143,7 @@ export function Projects() {
                     </div>
                   )}
 
-                  <p className="text-zinc-500 text-base md:text-xl font-medium mb-8 md:mb-10 leading-relaxed">
+                  <p className="text-zinc-500 text-base md:text-lg lg:text-xl font-medium mb-8 md:mb-10 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -247,9 +247,8 @@ export function Projects() {
                 </div>
 
                 {/* Project Image Grid - 4:3 Aspect Ratio, Soft Corners */}
-                <div className="grid grid-cols-2 gap-3 md:gap-6 order-1 lg:order-2">
-                  {project.images && project.images[0] ? (
-                    project.images.map((src, i) => (
+                <div className="grid grid-cols-2 gap-3 md:gap-5 lg:gap-6 order-2 lg:order-2">
+                  {project.images && project.images.map((src, i) => (
                       <div 
                         key={i} 
                         className="aspect-[4/3] rounded-[1rem] md:rounded-[1.5rem] bg-zinc-900 border border-black/[0.50] overflow-hidden relative group"
@@ -266,22 +265,7 @@ export function Projects() {
                         <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[1rem] md:rounded-[1.5rem]"></div>
                       </div>
                     ))
-                  ) : (
-                    project.images.map((src, i) => (
-                      <div 
-                        key={i} 
-                        className="aspect-[4/3] rounded-[1rem] md:rounded-[1.5rem] bg-zinc-900 border border-black/50 overflow-hidden relative group"
-                      >
-                        <img 
-                          src={src} 
-                          alt={`${project.name} ${i + 1}`} 
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-300"></div>
-                        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[1rem] md:rounded-[1.5rem]"></div>
-                      </div>
-                    ))
-                  )}
+                  }
                 </div>
               </motion.div>
             

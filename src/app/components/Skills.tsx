@@ -33,15 +33,15 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <section id="experience" className="bg-black text-white px-6 md:px-12 lg:px-24 py-32 border-t border-white/5">
+    <section id="experience" className="bg-black text-white px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32 border-t border-white/5">
       <motion.div
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-black mb-20 uppercase italic">Experiencia</h2>
+        <h2 className="text-2xl md:text-4xl font-black mb-12 md:mb-20 uppercase italic text-center md:text-left">Experiencia</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-20">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-20">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -50,14 +50,14 @@ export function Skills() {
               transition={{ duration: 0.6, delay: index * 0.05 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 mb-8 italic">
+              <h3 className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 mb-6 md:mb-8 italic">
                 {category.title}
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-3 md:space-y-4">
                 {category.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="text-lg font-bold uppercase italic tracking-wider hover:text-zinc-400 transition-colors cursor-default"
+                    className="text-base md:text-lg font-bold uppercase italic tracking-wider hover:text-zinc-400 transition-colors cursor-default"
                   >
                     {skill}
                   </li>
