@@ -152,7 +152,9 @@ export function Fragments() {
                 style={{ height: '100%', width: '100%', background: '#0a0a0a' }}
               >
                 <TileLayer
-                  url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+                  url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                  subdomains={["a", "b", "c", "d"]}
+                  attribution='&copy; OpenStreetMap contributors &copy; CARTO'
                 />
                 <Marker position={[10.9685, -74.7813]} icon={customMarker}>
                   <Popup>
