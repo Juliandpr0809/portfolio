@@ -247,8 +247,8 @@ export function Fragments() {
             viewport={{ once: true }}
           >
             <div className="font-mono space-y-2">
-              <TypewriterText text="Antes solo hacía CSS." delay={0.8} />
-              <TypewriterText text="Ahora levanto servidores Flask" delay={2.5} />
+              <TypewriterText text="Diseño interfaces limpias." delay={0.8} />
+              <TypewriterText text="Construyo lógica que soporta tráfico real." delay={2.5} />
               <div className="flex flex-wrap items-center gap-2">
                 <TypewriterText text="a las 2am con café." delay={4.5} />
                 <motion.div 
