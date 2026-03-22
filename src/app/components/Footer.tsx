@@ -130,7 +130,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/julianperez" target="_blank" rel="noopener noreferrer" className="block md:inline-block py-2 md:py-0 text-sm font-bold text-zinc-400 hover:text-white transition-colors uppercase italic tracking-wider min-h-[44px] md:min-h-0">
+                <a href="https://www.linkedin.com/in/julian-david-perez-rivera-562b22230/" target="_blank" rel="noopener noreferrer" className="block md:inline-block py-2 md:py-0 text-sm font-bold text-zinc-400 hover:text-white transition-colors uppercase italic tracking-wider min-h-[44px] md:min-h-0">
                   LinkedIn
                 </a>
               </li>
