@@ -7,7 +7,7 @@ const skillCategories = [
   },
   {
     title: 'Frameworks',
-    skills: ['Flask', '.NET', 'Bootstrap', 'REST APIs'],
+    skills: ['Flask', '.NET', 'React', 'Node.js', 'Bootstrap', 'REST APIs'],
   },
   {
     title: 'Ciencia de Datos',
